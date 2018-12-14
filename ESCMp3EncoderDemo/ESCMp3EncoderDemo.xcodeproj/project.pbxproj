@@ -14,7 +14,7 @@
 		F0B46A7120F6E54200008AF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0B46A6F20F6E54200008AF6 /* LaunchScreen.storyboard */; };
 		F0B46A7420F6E54200008AF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B46A7320F6E54200008AF6 /* main.m */; };
 		F0B46A7F20F6E70500008AF6 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B46A7E20F6E70500008AF6 /* libmp3lame.a */; };
-		F0B46A8220F6E7C600008AF6 /* ESCMp3Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.cpp */; };
+		F0B46A8220F6E7C600008AF6 /* ESCMp3Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.m */; };
 		F0B46A8420F6ED4600008AF6 /* vocal.pcm in Resources */ = {isa = PBXBuildFile; fileRef = F0B46A8320F6ED4600008AF6 /* vocal.pcm */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		F0B46A7320F6E54200008AF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0B46A7C20F6E70500008AF6 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
 		F0B46A7E20F6E70500008AF6 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
-		F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ESCMp3Encoder.cpp; sourceTree = "<group>"; };
+		F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESCMp3Encoder.m; sourceTree = "<group>"; };
 		F0B46A8120F6E7C600008AF6 /* ESCMp3Encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESCMp3Encoder.h; sourceTree = "<group>"; };
 		F0B46A8320F6ED4600008AF6 /* vocal.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = vocal.pcm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 				F0B46A6820F6E53700008AF6 /* ViewController.mm */,
 				F0B46A6A20F6E53700008AF6 /* Main.storyboard */,
 				F0B46A8120F6E7C600008AF6 /* ESCMp3Encoder.h */,
-				F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.cpp */,
+				F0B46A8020F6E7C600008AF6 /* ESCMp3Encoder.m */,
 				F0B46A8320F6ED4600008AF6 /* vocal.pcm */,
 				F0B46A6D20F6E54200008AF6 /* Assets.xcassets */,
 				F0B46A6F20F6E54200008AF6 /* LaunchScreen.storyboard */,
@@ -181,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B46A6920F6E53700008AF6 /* ViewController.mm in Sources */,
-				F0B46A8220F6E7C600008AF6 /* ESCMp3Encoder.cpp in Sources */,
+				F0B46A8220F6E7C600008AF6 /* ESCMp3Encoder.m in Sources */,
 				F0B46A7420F6E54200008AF6 /* main.m in Sources */,
 				F0B46A6620F6E53700008AF6 /* AppDelegate.m in Sources */,
 			);

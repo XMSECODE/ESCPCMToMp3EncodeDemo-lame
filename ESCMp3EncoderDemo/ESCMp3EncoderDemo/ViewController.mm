@@ -22,31 +22,27 @@
 
 - (IBAction)didClickEncode:(id)sender {
     NSString *pcmPath = [[NSBundle mainBundle] pathForResource:@"vocal.pcm" ofType:nil];
-    const char *pcmPathChar = [pcmPath cStringUsingEncoding:NSUTF8StringEncoding];
     
     NSString *mp3Path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
     mp3Path = [NSString stringWithFormat:@"%@/vocal.mp3",mp3Path];
-    const char *mp3PathChar = [mp3Path cStringUsingEncoding:NSUTF8StringEncoding];
     
     NSLog(@"pcmPath = %@\n mp3Path = %@",pcmPath,mp3Path);
-    ESCMp3Encoder *mp3Encoder = new ESCMp3Encoder();
+    ESCMp3Encoder *mp3Encoder = [[ESCMp3Encoder alloc] init];
     
     int sampleRate = 44100;
-    int channels = 2;
+    int channels = 1;
     int bitRate = 128 * 1024;
     
-    int result = mp3Encoder->Init(pcmPathChar, mp3PathChar, sampleRate, channels, bitRate);
+    int result = [mp3Encoder setupWithPcmFilePath:pcmPath mp3FilePath:mp3Path sampleRate:sampleRate channels:channels bitRate:bitRate];
     if (result != 0) {
         NSLog(@"init encoder failed!");
-        delete mp3Encoder;
         return;
     }
     
-    mp3Encoder->Encode();
+    [mp3Encoder encode];
     
-    mp3Encoder->Destory();
+    [mp3Encoder destory];
     
-    delete mp3Encoder;
    
 }
 
