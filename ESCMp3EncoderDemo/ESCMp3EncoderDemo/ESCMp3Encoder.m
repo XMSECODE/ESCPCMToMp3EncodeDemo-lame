@@ -43,9 +43,9 @@
 
 -(void)encode {
     int bufferSize = 1024 * 256;
-    short *buffer = malloc(bufferSize / 2);
-    short *leftBuffer = malloc(bufferSize / 4);
-    short *rightBuffer = malloc(bufferSize / 4);
+    short *buffer = malloc(bufferSize );
+    short *leftBuffer = malloc(bufferSize / 2);
+    short *rightBuffer = malloc(bufferSize / 2);
     unsigned char *mp3_buffer = malloc(bufferSize);
     size_t readBufferSize = 0;
     while ((readBufferSize = fread(buffer, 2, bufferSize / 2, self.pcmFile)) > 0) {
