@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,10 +25,19 @@
                                     <action selector="didClickEncode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5H-B1-CNz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwF-JC-E1U">
+                                <rect key="frame" x="160.5" y="210" width="54" height="30"/>
+                                <state key="normal" title="Decode"/>
+                                <connections>
+                                    <action selector="didClickDecodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NBA-mj-1qb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uwF-JC-E1U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ad3-hx-yzK"/>
                             <constraint firstItem="8qN-Co-VYI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GU4-Zg-0Tr"/>
+                            <constraint firstItem="uwF-JC-E1U" firstAttribute="top" secondItem="8qN-Co-VYI" secondAttribute="bottom" constant="50" id="IbW-mX-8j2"/>
                             <constraint firstItem="8qN-Co-VYI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="Vvm-XG-yBC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

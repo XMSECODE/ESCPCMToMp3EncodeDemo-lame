@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ESCMp3Encoder.h"
+#import "ESCMp3Decoder.h"
 
 @interface ViewController ()
 
@@ -46,6 +47,32 @@
    
 }
 
+- (IBAction)didClickDecodeButton:(id)sender {
+    
+    
+    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"G.E.M.邓紫棋 - 喜欢你.mp3" ofType:nil];
+    
+    NSString *pcmPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
+    pcmPath = [NSString stringWithFormat:@"%@/G.E.M.邓紫棋 - 喜欢你.pcm",pcmPath];
+    
+    NSLog(@"pcmPath = %@\n mp3Path = %@",pcmPath,mp3Path);
+    ESCMp3Decoder *decoder = [[ESCMp3Decoder alloc] init];
+    
+    int sampleRate = 44100;
+    int channels = 1;
+    int bitRate = 128 * 1024;
+    
+    int  result = [decoder setupWithMp3FilePath:mp3Path pcmFilePath:pcmPath sampleRate:sampleRate channels:channels bitRate:bitRate];
+    
+    if (result != 0) {
+        NSLog(@"init decoder failed!");
+        return;
+    }
+    
+    [decoder decode];
+    
+    [decoder destory];
+}
 
 
 @end

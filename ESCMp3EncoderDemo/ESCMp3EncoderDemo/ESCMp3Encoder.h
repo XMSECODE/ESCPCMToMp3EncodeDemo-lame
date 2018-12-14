@@ -16,7 +16,11 @@
 
 @interface ESCMp3Encoder : NSObject
 
-- (int)setupWithPcmFilePath:(NSString *)pcmFilePath mp3FilePath:(NSString *)mp3FilePath sampleRate:(int)sampleRate channels:(int)channels bitRate:(int)bitRate;
+- (int)setupWithPcmFilePath:(NSString *)pcmFilePath
+                mp3FilePath:(NSString *)mp3FilePath
+                 sampleRate:(int)sampleRate
+                   channels:(int)channels
+                    bitRate:(int)bitRate;
 -(void)encode;
 -(void)destory;
 
