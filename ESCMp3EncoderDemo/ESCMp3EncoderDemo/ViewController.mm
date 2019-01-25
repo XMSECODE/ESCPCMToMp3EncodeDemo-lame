@@ -50,7 +50,7 @@
 - (IBAction)didClickDecodeButton:(id)sender {
     
     
-    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"G.E.M.邓紫棋 - 喜欢你.mp3" ofType:nil];
+    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"vocal.mp3" ofType:nil];
     
     NSString *pcmPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
     pcmPath = [NSString stringWithFormat:@"%@/G.E.M.邓紫棋 - 喜欢你.pcm",pcmPath];
